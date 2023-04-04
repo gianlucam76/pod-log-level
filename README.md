@@ -14,7 +14,7 @@ Then in your application import library and register:
 
 ```go
 
-import "github.com/gianlucam76/pod-log-level/lib"
+        import "github.com/gianlucam76/pod-log-level/lib"
 ...
 	lib.RegisterForLogSettings(ctx,
 		"<YOUR POD NAMESPACE>", "<YOUR POD IDENTIFIER>", ctrl.Log.WithName("log-setter"),
@@ -57,7 +57,7 @@ make build
 ```
 
 ```bash
-./bin/manager log-level set --namespace=projectsveltos --identifier=SveltosManager --info
+./bin/helper log-level set --namespace=projectsveltos --identifier=SveltosManager --info
 ```
 
 When you do that, you can see log level is changed at runtime. Snippet from pod logs
@@ -70,7 +70,7 @@ I0404 13:41:23.793416       1 log_settings.go:247] "log-setter: Setting log seve
 You can see all settings
 
 ```bash
-./bin/manager log-level show                                                             
+./bin/helper log-level show                                                             
 +---------------------+----------------------+--------------+
 | COMPONENT NAMESPACE | COMPONENT IDENTIFIER |  VERBOSITY   |
 +---------------------+----------------------+--------------+
@@ -81,7 +81,7 @@ You can see all settings
 You can increase log level to debug for instance
 
 ```bash
- ./bin/manager log-level set --namespace=projectsveltos --identifier=SveltosManager --verbose
+ ./bin/helper log-level set --namespace=projectsveltos --identifier=SveltosManager --verbose
  ```
 
 ```bash
