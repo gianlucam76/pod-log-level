@@ -81,7 +81,7 @@ var _ = BeforeSuite(func() {
 	klog.InitFlags(nil)
 	Expect(flag.Lookup("v").Value.Set("0")).To(BeNil())
 	instance = lib.RegisterForLogSettings(context.TODO(),
-		v1alpha1.Component{Namespace: componentNamespace, Identifier: componentIdentifier},
+		componentNamespace, componentIdentifier,
 		klogr.New(), cfg)
 })
 var _ = AfterSuite(func() {

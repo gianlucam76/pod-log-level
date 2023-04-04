@@ -19,6 +19,7 @@ package lib
 import (
 	"context"
 	"flag"
+	"fmt"
 	"strconv"
 	"sync"
 
@@ -127,12 +128,14 @@ func GetInstance() *LogSetter {
 // severity set for affected component(s).
 func RegisterForLogSettings(
 	ctx context.Context,
-	component v1alpha1.Component,
+	componentNamespace, componentIdentifier string,
 	logger logr.Logger,
 	config *rest.Config,
 ) *LogSetter {
 
-	logger.Info("Registering for run-time log severity changes", "component", component)
+	logger.Info("Registering for run-time log severity changes", "component",
+		fmt.Sprintf("%s/%s", componentNamespace, componentIdentifier))
+	component := v1alpha1.Component{Namespace: componentNamespace, Identifier: componentIdentifier}
 	newInstance(component, config, logger)
 
 	// dynamic informer needs to be told which type to watch
