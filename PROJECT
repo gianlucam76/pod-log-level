@@ -1,0 +1,15 @@
+domain: projectsveltos.io
+layout:
+- go.kubebuilder.io/v3
+projectName: pod-log-level
+repo: github.com/gianlucam76/pod-log-level
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: projectsveltos.io
+  group: open
+  kind: LogSetting
+  path: github.com/gianlucam76/pod-log-level/api/v1alpha1
+  version: v1alpha1
+version: "3"
