@@ -85,7 +85,7 @@ Description:
 	}
 
 	identifier := ""
-	if passedIdentifier := parsedArgs["--namespace"]; passedIdentifier != nil {
+	if passedIdentifier := parsedArgs["--identifier"]; passedIdentifier != nil {
 		identifier = passedIdentifier.(string)
 	}
 

@@ -74,7 +74,7 @@ func Set(ctx context.Context, args []string) error {
 Options:
   -h --help                    Show this screen.
      --namespace=<namespace>   Namespace of the component for which log severity is being set.
-	 --identifier=<identifier> Identifier of the component for which log severity is being set.
+     --identifier=<identifier> Identifier of the component for which log severity is being set.
      --info                    Set log severity to info.
      --debug                   Set log severity to debug.
      --verbose                 Set log severity to verbose.
@@ -99,7 +99,7 @@ Description:
 	}
 
 	identifier := ""
-	if passedIdentifier := parsedArgs["--namespace"]; passedIdentifier != nil {
+	if passedIdentifier := parsedArgs["--identifier"]; passedIdentifier != nil {
 		identifier = passedIdentifier.(string)
 	}
 
