@@ -74,7 +74,7 @@ You can see all settings
 +---------------------+----------------------+--------------+
 | COMPONENT NAMESPACE | COMPONENT IDENTIFIER |  VERBOSITY   |
 +---------------------+----------------------+--------------+
-| projectsveltos      | projectsveltos       | LogLevelInfo |
+| projectsveltos      | SveltosManager       | LogLevelInfo |
 +---------------------+----------------------+--------------+
 ```
 
@@ -89,7 +89,7 @@ You can increase log level to debug for instance
 +---------------------+----------------------+-----------------+
 | COMPONENT NAMESPACE | COMPONENT IDENTIFIER |    VERBOSITY    |
 +---------------------+----------------------+-----------------+
-| projectsveltos      | projectsveltos       | LogLevelVerbose |
+| projectsveltos      | SveltosManager       | LogLevelVerbose |
 +---------------------+----------------------+-----------------+
 ```
 
