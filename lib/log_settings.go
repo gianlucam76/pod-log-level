@@ -140,7 +140,7 @@ func RegisterForLogSettings(
 
 	// dynamic informer needs to be told which type to watch
 	dcinformer, err := getDynamicInformer(
-		"logsettings.v1alpha1.lib.projectsveltos.io",
+		"logsettings.v1alpha1.open.projectsveltos.io",
 	)
 	if err != nil {
 		logger.Error(err, "Failed to get informer")
