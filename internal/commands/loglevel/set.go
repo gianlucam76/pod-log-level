@@ -47,11 +47,6 @@ func updateLogSetting(ctx context.Context, logSeverity v1alpha1.LogLevel,
 			}
 			found = true
 			break
-		} else {
-			spec[i] = v1alpha1.ComponentConfiguration{
-				Component: c.component,
-				LogLevel:  c.logSeverity,
-			}
 		}
 	}
 
