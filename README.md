@@ -93,3 +93,32 @@ You can increase log level to debug for instance
 +---------------------+----------------------+-----------------+
 ```
 
+## Log levels
+
+By default log levels are:
+
+1. info => V(0)
+2. debug => V(5)
+3. verbose => V(10)
+
+Library exposes API to change those setting per Pod.
+
+```go
+	instance := lib.GetInstance()
+	instance.SetInfoValue(2)
+	instance.SetDebugValue(6)
+	instance.SetVerboseValue(8)
+```
+
+then  if you set level to Debug
+
+```bash
+./bin/helper log-level set --namespace=projectsveltos --identifier=SveltosManager --debug  
+```
+
+in your POD logs you can see level is 6
+
+```bash
+I0404 15:14:16.293690       1 log_settings.go:198] "log-setter: got update notification for LogSettings"
+I0404 15:14:16.293864       1 log_settings.go:232] "log-setter: Setting log severity to debug" debug="6"
+```
