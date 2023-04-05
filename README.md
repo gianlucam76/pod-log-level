@@ -3,6 +3,8 @@ A small library to allow changing pod log level without restarting the pod.
 
 Sometimes it is important to be able to change Pod log level at run-time, without restarting the Pod. Here is where this library will help. 
 
+Currently works with k8s.io/klog/v2 
+
 ## How to use it
 Deploy LogSetting CRD
 
