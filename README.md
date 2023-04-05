@@ -19,8 +19,8 @@ Then in your application import library and register:
         import "github.com/gianlucam76/pod-log-level/lib"
 ...
 	lib.RegisterForLogSettings(ctx,
-		"<YOUR POD NAMESPACE>", "<YOUR POD IDENTIFIER>", ctrl.Log.WithName("log-setter"),
-		ctrl.GetConfigOrDie())
+		"<YOUR POD NAMESPACE>", "<YOUR POD IDENTIFIER>", <logr.Logger>,
+		<cluster *rest.Config>)
 ```
 
 Make sure pod identifier does not change across pod restarts.
