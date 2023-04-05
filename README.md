@@ -44,8 +44,8 @@ That's all that is required.
 
 ```
 	lib.RegisterForLogSettings(ctx,
-		"projectsveltos", "SveltosManager", ctrl.Log.WithName("log-setter"),
-		ctrl.GetConfigOrDie())
+		"projectsveltos", "SveltosManager", <logr.Logger>,
+		<cluster *rest.Config>)
 ```
 
 To change log level, you have two choices. You can manually edit "default" LogSetting instance or better, use CLI that comes with this library.
